@@ -1,17 +1,24 @@
+import java.text.DateFormat;
 import java.util.Date;
 
 public class Event {
 
-    private int id;
+    private int id = 1 + (int)(Math.random() * ((9999) + 1));
     private String msg;
     private Date date;
+    private DateFormat df;
 
-    public Event(Date date) {
+    public Event(Date date, DateFormat df) {
         this.date = date;
+        this.df = df;
     }
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public String getMsg() {
+        return msg;
     }
 
     @Override
@@ -19,8 +26,14 @@ public class Event {
         return "Event{" +
                 "id=" + id +
                 ", msg='" + msg + '\'' +
-                ", date=" + date +
+                ", date=" + df.format(date) +
                 '}';
+    }
+
+    public static void main(String[] args) {
+
+    //    System.out.println( new Event(new Date()) );
+
     }
 
     /*
