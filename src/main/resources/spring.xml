@@ -11,6 +11,7 @@
         <constructor-arg>
             <bean class="java.util.Date"/>
         </constructor-arg>
+        <constructor-arg ref="dateFormat"/>
     </bean>
 
     <bean id="client" class="Client">
