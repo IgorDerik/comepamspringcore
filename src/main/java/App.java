@@ -1,4 +1,4 @@
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class App {
@@ -21,7 +21,7 @@ public class App {
 
     public static void main(String[] args) {
 
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
+        ConfigurableApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
         App app = (App) ctx.getBean("app");
 
         Event event = ctx.getBean(Event.class);
@@ -30,6 +30,10 @@ public class App {
         event = ctx.getBean(Event.class);
         app.logEvent(event,"Some event for 2");
 
+        event = ctx.getBean(Event.class);
+        app.logEvent(event,"Some event for 3");
+
+        ctx.close();
     }
 
 }
