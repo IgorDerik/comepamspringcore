@@ -1,8 +1,6 @@
 Hello there! Some event for John Smith
 Hello there! Some event for 2
 Hello there! Some event for 3
-Hello there! Some event for 2
-Hello there! Some event for 2
-Hello there! Some event for 2
-Hello there! Some event for 2
-Hello there! Some event for 2
+Event{id=5271, msg='Hello there! Some event for 2', date=11 трав. 2018 2:44:47}
+Event{id=1958, msg='Hello there! Some event for 2', date=11 трав. 2018 2:45:47}
+Event{id=4789, msg='Hello there! Some event for John Smith', date=11 трав. 2018 2:46:44}

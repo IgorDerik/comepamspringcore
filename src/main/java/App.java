@@ -32,10 +32,10 @@ public class App {
         App app = (App) ctx.getBean("app");
 
         Event event = ctx.getBean(Event.class);
-        app.logEvent(event, EventType.INFO, "Some event for 1");
+        app.logEvent(event, EventType.INFO, "Some event for 2");
 
         event = ctx.getBean(Event.class);
-        app.logEvent(event, EventType.ERROR, "Some event for 2");
+        app.logEvent(event, EventType.ERROR, "Some event for 1");
 
         ctx.close();
     }
